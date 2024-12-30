@@ -1,55 +1,124 @@
+# Discord Active Developer Badge Setup
 
-# Active Developer Badge
-Discord just launched the new "Active Developer" badge and they're encouraging new developers to join the community and get it.
-If you're still learning and want the badge, follow the instructions below!
+This guide will help you get the **Active Developer** badge from Discord by following the instructions step-by-step. If you're new to Discord bot development, this is a great way to get started!
 
+---
 
+## Prerequisites
 
+- **A Discord account**
+- **A Discord server** (You can create a new one for testing)
+- **A Replit account** (for running the bot)
+- **A Discord bot token** (You’ll get this when you create the bot on the Discord Developer Portal)
 
---------------------------------------
+---
 
-![image](https://i.imgur.com/z6jzw4C.png)
+## Steps to Get the Active Developer Badge
 
---------------------------------------
+### 1. **Create a New Application and Bot on Discord**
 
+- Go to the [Discord Developer Portal](https://discord.com/developers/applications).
+- Log in with your Discord account and click on **"New Application"**.
+- Name your application and click **"Create"**.
+- In the left sidebar, select the **"Bot"** tab and click on **"Add Bot"**.
+- **Important**: Click **"Reset Token"** to generate your bot's token. **Save this token**, as you'll use it later.
 
+---
 
-# Instructions
+### 2. **Set Up the Bot Using Replit**
 
-- Go to https://discord.com/developers/applications, and create a new application on the account you want the badge on.
-- Go to the bot tab and generate a bot account for the application.
-- Click the "Reset Token" button to generate a token (if you have 2fa enabled, you'll need your code).
-- Copy the token to your clipboard.
-- Click this badge to clone this repo to a new repl in Replit -> [![Run on Repl.it](https://replit.com/badge/github/hackermondev/discord-active-developer-badge)](https://replit.com/new/github/hackermondev/discord-active-developer-badge)
-  - You will be redirected to Replit, you might have to create an account (you can Register with Google).
-    - Replit is a website, and does not run off your computer! 
-- Wait for the repo has finished cloning and the repl to fully connect.
-- Click the green "Run" button at the top.
-- Go to the console (big black square on the right) and paste in the token you copied earlier (**Note**: ``CTRL + V`` won't work, you'll need to do ``CTRL + Shift + V`` or right-click and click paste).
-- Press the 'Enter' key.
-- Wait for it to print 'DONE | Application/Bot is up and running. DO NOT CLOSE THIS TAB UNLESS YOU ARE FINISHED USING THE BOT, IT WILL PUT THE BOT OFFLINE.' in the console, **DON'T STOP THE PROGRAM OR CLOSE THE TAB YET OR THE BOT WILL CONSIDERED BY DISCORD AS 'UNRESPONSIVE'**
-- Go back to the application page, go to the "General Information" tab, scroll down and copy application id.
-- Create a new discord server (you can delete it at the end).
-- Enable community on the server (you only need to do this if you don't own any other discord server with community enabled)
-- Return back to https://discord.com/developers/applications.
-- Copy the application id.
-- Use this invite link to add the application to the server: (replace ``{applicationid}`` with what you copied) ``https://discord.com/oauth2/authorize?client_id={applicationid}&scope=bot%20applications.commands&permissions=105227086912``
-- In the server, go to a channel and use the ``/ping`` command on the bot.
-- Go to the <https://discord.com/developers/active-developer> page and register everything (**if it says you're not eligible, it's because you're not registered in their system yet. you might have to wait up to 24 hours**).
-- Congrats on that shiny new badge.
+1. Clone this repository by clicking the badge below:
 
+   [![Run on Replit](https://replit.com/badge/github/hackermondev/discord-active-developer-badge)](https://replit.com/new/github/hackermondev/discord-active-developer-badge)
 
-**NOTE:** Make sure you have the “Use data to improve Discord” setting enabled under User Settings > Privacy & Safety otherwise you won't be able to be marked as eligible.
+2. You will be redirected to Replit, and it may ask you to sign in. You can register using Google or GitHub.
 
-**NOTE 2:** You do not need to keep the Replit tab open 24/7. Only go to the Replit url whenever you want to run your bot.
+3. Once you're in Replit, the code will be automatically cloned into your workspace.
 
-If you're encountering any issues, [create a new GitHub issue](https://github.com/hackermondev/discord-active-developer/issues) or join [this](https://discord.gg/M5MSE9CvNM) server and ping me in the `#general` channel.
+---
 
+### 3. **Run the Bot**
 
-# Star the repo!!!
-If you were able to successfully get the badge from this, star this repository so more people can see it and feel free to join our Discord server: https://discord.gg/M5MSE9CvNM
+1. Open the `bot.py` file in Replit. It’s a simple bot template.
+   
+2. **Paste Your Token**:
+   - In the `bot.py` file, find the line `bot.run('YOUR_BOT_TOKEN')`.
+   - Replace `'YOUR_BOT_TOKEN'` with the bot token you copied earlier from the Discord Developer Portal.
 
-### No, it's not "patched"
-I've seen a lot of people say that this method has been patched or something. It's not. It still works (people are still getting the badge from it), if you're unable to get the badge after 24 hours of waiting, you probably didn't follow the instructions correctly.
+3. **Run the Bot**:
+   - Click the **green "Run"** button at the top of the Replit interface.
+   - The bot will start running, and you will see a message in the console like `Logged in as <bot_name>`.
+   - The bot will now be online!
 
-I think people think this is patched because of NoTextToSpeech's video but that video linked to another repository that works a different way, not this one.
+---
+
+### 4. **Invite the Bot to Your Discord Server**
+
+1. Go back to the **Discord Developer Portal**.
+2. In your application’s settings, go to the **OAuth2** tab.
+3. Under **OAuth2 URL Generator**, select the following:
+   - **Scopes**: `bot`
+   - **Bot Permissions**: `Send Messages` and any other permissions your bot needs.
+4. Copy the generated URL and paste it into your browser to invite the bot to your Discord server.
+
+---
+
+### 5. **Verify the Bot is Working**
+
+1. In your Discord server, go to any text channel.
+2. Type `/ping` and press **Enter**.
+3. The bot should reply with "Pong!", indicating it's working properly.
+
+---
+
+### 6. **Enable Community on Your Server**
+
+1. If you don’t already have a community-enabled server, create a new server for testing purposes.
+2. Enable **Community** by going to **Server Settings > Community**.
+3. This step is required for your application to qualify for the Active Developer Badge.
+
+---
+
+### 7. **Apply for the Badge**
+
+1. After your bot is working, visit the [Discord Active Developer page](https://discord.com/developers/active-developer).
+2. Register your information and follow the instructions. If you're not immediately eligible, it can take up to 24 hours for Discord to mark you as eligible.
+
+---
+
+### 8. **Congratulations! 🎉**
+
+Once you're approved, you will receive the **Active Developer Badge** on your Discord profile!
+
+---
+
+## Notes
+
+- **Replit Cloud Hosting**: You don't need to keep the Replit tab open 24/7. Run the bot whenever you need it.
+- **Eligibility**: Make sure your **"Use data to improve Discord"** setting is enabled under **User Settings > Privacy & Safety**. If this setting is off, you won’t be eligible for the badge.
+- **Token Security**: Never share your bot's token publicly! If your token is exposed, regenerate it immediately in the Discord Developer Portal.
+
+---
+
+## Support
+
+If you encounter any issues during setup, please feel free to:
+
+- [Open a GitHub issue](https://github.com/hackermondev/discord-active-developer-badge/issues).
+- Join our **[support Discord server](https://discord.gg/M5MSE9CvNM)** and ping me in the `#general` channel for assistance.
+
+---
+
+## Contributing
+
+If you find any issues or have suggestions to improve this setup, feel free to fork this repository and create a pull request. Your contributions are welcome!
+
+---
+
+### Star the Repo ⭐
+
+If you successfully get the Active Developer Badge, please **star** this repository to help others find it and use it. Feel free to join the [Discord server](https://discord.gg/M5MSE9CvNM) for additional help and updates.
+
+---
+
+Happy coding and enjoy your **Active Developer Badge**! 🎉🚀
